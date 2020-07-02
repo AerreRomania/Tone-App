@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="Tone.Views.NavPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Tone.Views"
+    BarBackgroundColor="White"
+    SelectedTabColor="Black"
+    UnselectedTabColor="#06bbdc"
+    mc:Ignorable="d">
+    <TabbedPage.Children>
+        <views:HomeView Title="Home" IconImageSource="home" />
+        <views:ShopView Title="Shop" IconImageSource="shop" />
+        <views:ScanView Title="Scan" IconImageSource="scan" />
+        <views:LoginView Title="Login" IconImageSource="login" />
+    </TabbedPage.Children>
+</TabbedPage>

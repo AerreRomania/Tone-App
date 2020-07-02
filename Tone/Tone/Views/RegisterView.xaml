@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tone.Views.RegisterView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Render="clr-namespace:Tone.Render"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:eff="clr-namespace:XamEffects;assembly=XamEffects"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="White"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20"
+            Padding="10"
+            VerticalOptions="CenterAndExpand">
+            <Image
+                Margin="0,0,0,40"
+                Aspect="AspectFit"
+                HeightRequest="100"
+                Source="logo" />
+            <Frame CornerRadius="8">
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Text="Email address *" />
+                    <Render:CustomEntry
+                        Placeholder="Email"
+                        PlaceholderColor="#626262"
+                        ReturnType="Done" />
+                    <Label FontSize="16" Text="A password will be sent to your email address." />
+                    <ContentView eff:TouchEffect.Color="White">
+                        <Label Text="Your personal data will be used to support your experience throughout this website, to manage access to your account and for other purposes described in our privacy policy. Tap on this text for details." TextColor="IndianRed" />
+                    </ContentView>
+                    <Button
+                        Margin="40,0,40,0"
+                        BackgroundColor="#06bbdc"
+                        Command="{Binding LoginCommand}"
+                        CornerRadius="24"
+                        Text="Register"
+                        TextColor="White" />
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

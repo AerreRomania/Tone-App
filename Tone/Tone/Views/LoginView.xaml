@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tone.Views.LoginView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Reder="clr-namespace:Tone.Render"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:eff="clr-namespace:XamEffects;assembly=XamEffects"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Tone.ViewModels"
+    BackgroundColor="White"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:LoginVM />
+    </ContentPage.BindingContext>
+    <StackLayout
+        Margin="20"
+        Padding="10"
+        VerticalOptions="CenterAndExpand">
+        <Image
+            Margin="0,0,0,40"
+            Aspect="AspectFit"
+            HeightRequest="100"
+            Source="logo" />
+        <Frame CornerRadius="8">
+            <StackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Username or email address *" />
+                <Reder:CustomEntry
+                    Placeholder="Email"
+                    PlaceholderColor="#626262"
+                    ReturnType="Next" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Password *" />
+                <Reder:CustomEntry
+                    IsPassword="True"
+                    Placeholder="Password"
+                    PlaceholderColor="#626262" />
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        Margin="8,0,6,0"
+                        BackgroundColor="#06bbdc"
+                        Command="{Binding LoginCommand}"
+                        CornerRadius="24"
+                        Text="Login"
+                        TextColor="White" />
+                    <CheckBox />
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Remember me"
+                        VerticalOptions="Center" />
+                </StackLayout>
+                <ContentView eff:TouchEffect.Color="#06bbdc" HorizontalOptions="Start">
+                    <Label
+                        FontSize="15"
+                        Text="Lost your passoword?"
+                        TextColor="#06bbdc" />
+                </ContentView>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout>
+            <Label FontAttributes="Bold" Text="You dont have an account?" />
+            <Button
+                BackgroundColor="#06bbdc"
+                Command="{Binding RegisterCommand}"
+                CornerRadius="24"
+                Text="Register here"
+                TextColor="White" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

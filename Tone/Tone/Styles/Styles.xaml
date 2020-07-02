@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Tone.Styles.Styles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ResourceDictionary>
+        <!--  Font Awesome  -->
+        <OnPlatform
+            x:Key="FontAwesomeRegular"
+            x:TypeArguments="x:String"
+            Android="fa-regular.otf#FontAwesome5FreeRegular"
+            iOS="FontAwesome5Free-Regular" />
+        <OnPlatform
+            x:Key="FontAwesomeSolid"
+            x:TypeArguments="x:String"
+            Android="fa-solid.otf#FontAwesome5FreeSolid"
+            iOS="FontAwesome5Free-Solid" />
+        <OnPlatform
+            x:Key="FontAwesomeBrands"
+            x:TypeArguments="x:String"
+            Android="fa-brands-regular.otf#FontAwesome5BrandsRegular"
+            iOS="FontAwesome5Brands-Regular" />
+        <!--  Text Font  -->
+        <OnPlatform
+            x:Key="khmer"
+            x:TypeArguments="x:String"
+            Android="khmer.ttf#khmer"
+            iOS="Khmer Sangam MN" />
+        <OnPlatform
+            x:Key="trebuc"
+            x:TypeArguments="x:String"
+            Android="trebuc.ttf#trebuchet"
+            iOS="Trebuchet MS" />
+
+        <!--  Colors  -->
+        <Color x:Key="blue">White</Color>
+        <Color x:Key="black">Black</Color>
+        <!--  Styles  -->
+        <!--  Label  -->
+        <Style x:Key="lbl" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource black}" />
+        </Style>
+        <!--  Button  in frame  -->
+        <Style x:Key="StyleButton" TargetType="Button">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="10" />
+        </Style>
+        <!--  Button  -->
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="24" />
+            <Setter Property="TextColor" Value="white" />
+        </Style>
+
+        <!--  Entry  -->
+        <Style x:Key="StyleEntry" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="ReturnType" Value="Next" />
+            <Setter Property="PlaceholderColor" Value="SlateGray" />
+            <Setter Property="FontFamily" Value="{StaticResource trebuc}" />
+            <Setter Property="Margin" Value="0" />
+        </Style>
+
+        <!--  Navigation buttons  -->
+        <Style x:Key="NavButton" TargetType="Button">
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+
+        <!--  ImageButton  -->
+        <Style x:Key="imgbtnStyle" TargetType="ImageButton">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="WidthRequest" Value="30" />
+            <Setter Property="Aspect" Value="AspectFit" />
+        </Style>
+    </ResourceDictionary>
+</ResourceDictionary>

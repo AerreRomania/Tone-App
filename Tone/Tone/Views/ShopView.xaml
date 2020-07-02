@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tone.Views.ShopView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Tone.ViewModels"
+    BackgroundColor="White"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:ShopVM />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout
+                Margin="0,10,0,0"
+                BackgroundColor="White"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="100">
+                <Label
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="Poducts"
+                    TextColor="Black" />
+                <ImageButton
+                    Padding="2"
+                    Aspect="AspectFit"
+                    BackgroundColor="White"
+                    HeightRequest="30"
+                    Source="cart" />
+            </StackLayout>
+            <ListView
+                HasUnevenRows="True"
+                ItemsSource="{Binding ProductsList}"
+                SeparatorVisibility="None"
+                VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                Margin="8"
+                                Padding="6"
+                                CornerRadius="8"
+                                HasShadow="True">
+                                <StackLayout>
+                                    <Image Source="{Binding Image}" />
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="{Binding Name}"
+                                        TextColor="Black" />
+                                    <StackLayout
+                                        HorizontalOptions="Center"
+                                        Orientation="Horizontal"
+                                        Spacing="2">
+                                        <Label
+                                            FontSize="18"
+                                            Text="$"
+                                            TextColor="#06bbdc" />
+                                        <Label
+                                            FontSize="18"
+                                            Text="{Binding Price}"
+                                            TextColor="#06bbdc" />
+                                    </StackLayout>
+                                    <Button
+                                        Margin="60,0,60,0"
+                                        BackgroundColor="#06bbdc"
+                                        CornerRadius="10"
+                                        Text="Add"
+                                        TextColor="White" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tone.Views.HomeView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="White"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid RowSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="440" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Aspect="AspectFill" Source="bg" />
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        Text="MASCHERINA"
+                        TextColor="Black" />
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="In 100% cotone" />
+                    <Label
+                        Margin="20"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        Text="idrorepellente, evita che saliva e muco passano essere proiettati con terzi e/o cose"
+                        TextColor="Black" />
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="1"
+                    Padding="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="40">
+                    <StackLayout>
+                        <Image HeightRequest="40" Source="eco" />
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="ECOSOSTENIBILE"
+                            TextColor="#001e5b" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Image HeightRequest="40" Source="idro" />
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="IDROREPELLENTE"
+                            TextColor="#001e5b" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="2"
+                    Padding="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="40">
+                    <StackLayout Margin="10,0,10,0">
+                        <Image HeightRequest="40" Source="reciclabile" />
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="RECICLABILE"
+                            TextColor="#001e5b" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Image HeightRequest="40" Source="personalizare" />
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="PERSONALIZZABILE"
+                            TextColor="#001e5b" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
